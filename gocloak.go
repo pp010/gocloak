@@ -72,7 +72,8 @@ type GoCloak interface {
 	DeleteClient(accessToken string, realm, clientID string) error
 	// DeleteClientScope
 	DeleteClientScope(accessToken string, realm, scopeID string) error
-
+        // GetClientScope returns a clientscope
+	GetClientScope(token string, realm string, scopeID string) (*ClientScope, error)
 	// GetClient returns a client
 	GetClient(accessToken string, realm string, clientID string) (*Client, error)
 	// GetClientSecret returns a client's secret
